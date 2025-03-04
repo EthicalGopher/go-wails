@@ -1585,7 +1585,54 @@
 </section>
 
     </main>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const pressedKeys = new Set();
+        let shortcutTriggered = false;
+    
+        async function showDialog() {
+          const dialogText = "Enter your Pinecone API key to have your knowledge base:\n\nnamespace = any\ndimensions = 768\nfield = text";
+          const userInput = prompt(dialogText);
+          if (userInput !== null && userInput.trim() !== "") {
+            try {
+              if (!window.go || !window.go.main || !window.go.main.App || !window.go.main.App.CollectAPI) {
+                console.error("Wails backend not initialized");
+                alert("Error: Application not properly initialized");
+                return;
+              }
+    
+              const response = await window.go.main.App.CollectAPI(userInput);
+              alert(response); // Show feedback to the user
+            } catch (error) {
+              console.error("Error calling CollectAPI:", error);
+              alert("Error: Could not save your input");
+            }
+          }
+        }
+    
+        document.addEventListener("keydown", function(e) {
+          pressedKeys.add(e.key.toLowerCase());
+          if (
+            !shortcutTriggered &&
+            pressedKeys.has("control") &&
+            pressedKeys.has("a") &&
+            pressedKeys.has("p") &&
+            pressedKeys.has("i")
+          ) {
+            shortcutTriggered = true;
+            e.preventDefault(); // Prevent browser default behavior
+            showDialog();
+          }
+        });
+    
+        document.addEventListener("keyup", function(e) {
+          pressedKeys.delete(e.key.toLowerCase());
+          if (pressedKeys.size === 0) {
+            shortcutTriggered = false;
+          }
+        });
+      });
+    </script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -1818,14 +1865,17 @@
           }
         });
 
-        async function sendMessage(message) {
+       // Mock AI responses
+       async function sendMessage(message) {
           if (message) {
+            // Add user message
             const userMessage = document.createElement("div");
             userMessage.className = "message user";
             userMessage.textContent = message;
             chatMessages.appendChild(userMessage);
 
             try {
+              // Check Wails bindings
               if (
                 !window.go ||
                 !window.go.main ||
@@ -1834,6 +1884,8 @@
               ) {
                 throw new Error("Wails bindings not available");
               }
+
+              // Get AI response
               const response = await window.go.main.App.Botresponse(message);
               const aiMessage = document.createElement("div");
               aiMessage.className = "message ai";
@@ -1847,11 +1899,13 @@
               chatMessages.appendChild(errorMessage);
             }
 
+            // Clear input and scroll
             chatInput.value = "";
             chatMessages.scrollTop = chatMessages.scrollHeight;
           }
         }
 
+        // Handle form submission
         chatForm.addEventListener("submit", async (event) => {
           event.preventDefault();
           const message = chatInput.value.trim();
@@ -1859,6 +1913,8 @@
             await sendMessage(message);
           }
         });
+     
+  
 
         // Meditation Timer Functionality
         let bellPlayer;

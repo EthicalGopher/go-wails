@@ -10,11 +10,8 @@ import (
 	"io"
 	"log"
 	"os"
-
 	"github.com/google/generative-ai-go/genai"
-
 	"github.com/pinecone-io/go-pinecone/pinecone"
-
 	"google.golang.org/api/option"
 )
 
@@ -228,7 +225,7 @@ func Queryvector(data string) string {
 }
 
 func SearchData(queryVector []float32) []string {
-	indexName := "homechat"
+	indexName := "mindfulai"
 	namespace := "any"
 	field := "text"
 	API := PineconeAPI
