@@ -946,6 +946,38 @@
       section.active {
         display: block;
       }
+      .cards {
+            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            
+            padding: 20px; 
+        }
+        
+        .cards>.card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 10px 0 10px 0 ;
+            box-shadow: 0px 10px 15px rgba(112, 19, 81, 0.1) inset;
+            text-align: left;
+            min-height: 500px;
+            width: 400px;
+           
+           
+        }
+        .card>h2{
+         
+          margin-bottom: 40px;
+        }
+        .card>p{
+          padding: 3%;
+        }
+        .card>p>span{
+          display: inline-block;
+          margin-bottom: 10px;
+        }
     </style>
   </head>
 
@@ -1141,54 +1173,192 @@
                       </p>
                     </div>
                   </div>
-
                   <div
-                    class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                  >
-                    <div
-                      class="h-48 bg-cover bg-center"
-                      style="
-                        background-image: url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
-                      "
-                    ></div>
-                    <div class="p-6">
-                      <h2 class="text-xl font-bold mb-3">
-                        Types of Meditation
-                      </h2>
-                      <ul class="space-y-1">
-                        <li>Mindfulness Meditation</li>
-                        <li>Guided Meditation</li>
-                        <li>Transcendental Meditation</li>
-                        <li>Loving-Kindness Meditation</li>
-                        <li>Breath Awareness</li>
-                      </ul>
-                    </div>
+                  class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div
+                    class="h-48 bg-cover bg-center"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+                    "
+                  ></div>
+                  <div class="p-6">
+                    <h2 class="text-xl font-bold mb-3">
+                      Types of Meditation
+                    </h2>
+                    <ul class="space-y-1">
+                      <li>Mindfulness Meditation</li>
+                      <li>Guided Meditation</li>
+                      <li>Transcendental Meditation</li>
+                      <li>Loving-Kindness Meditation</li>
+                      <li>Breath Awareness</li>
+                    </ul>
                   </div>
+                </div>
 
+                <div
+                  class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
                   <div
-                    class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                  >
-                    <div
-                      class="h-48 bg-cover bg-center"
-                      style="
-                        background-image: url('https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
-                      "
-                    ></div>
-                    <div class="p-6">
-                      <h2 class="text-xl font-bold mb-3">
-                        Benefits of Meditation
-                      </h2>
-                      <ul class="space-y-1">
-                        <li>Enhances Mental Clarity & Focus</li>
-                        <li>Reduces Stress & Anxiety</li>
-                        <li>Improves Sleep Quality</li>
-                        <li>Boosts Emotional Well-being</li>
-                        <li>Improves Physical Health</li>
-                      </ul>
-                    </div>
+                    class="h-48 bg-cover bg-center"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+                    "
+                  ></div>
+                  <div class="p-6">
+                    <h2 class="text-xl font-bold mb-3">
+                      Benefits of Meditation
+                    </h2>
+                    <ul class="space-y-1">
+                      <li>Enhances Mental Clarity & Focus</li>
+                      <li>Reduces Stress & Anxiety</li>
+                      <li>Improves Sleep Quality</li>
+                      <li>Boosts Emotional Well-being</li>
+                      <li>Improves Physical Health</li>
+                    </ul>
                   </div>
                 </div>
               </div>
+           
+
+                  
+            <div>
+              <h1   style="font-size: 3rem;margin: 20px 50px 0 0;padding:0 9%;">Breathing Techniques</h1>
+              
+              <div class="cards">
+                <div class="card">
+                  <h2>1. Box Breathing (Square Breathing)</h2>
+                  <p><span><b>Best for:</b></span> <span>Enhancing focus, reducing anxiety, and calming the nervous system.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale through your nose for 4 seconds.<br>
+                      2. Hold your breath for 4 seconds.<br>
+                      3. Exhale slowly through your mouth for 4 seconds.<br>
+                      4. Hold your breath again for 4 seconds.<br>
+                      5. Repeat this cycle for 5 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>2. 4-7-8 Breathing</h2>
+                  <p><span><b>Best for:</b></span> <span>Relaxation, reducing anxiety, and improving sleep.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale through your nose for 4 seconds.<br>
+                      2. Hold your breath for 7 seconds.<br>
+                      3. Exhale slowly through your mouth for 8 seconds (make a whooshing sound if comfortable).<br>
+                      4. Repeat for 4–8 cycles.</p>
+              </div>
+              <div class="card">
+                  <h2>3. Alternate Nostril Breathing (Nadi Shodhana)</h2>
+                  <p><span><b>Best for:</b></span> <span>Balancing energy, reducing stress, and increasing focus.</span><br>
+                      <b>Steps:</b><br>
+                      1. Sit in a comfortable position and close your eyes.<br>
+                      2. Use your right thumb to close your right nostril and inhale deeply through the left nostril.<br>
+                      3. Close your left nostril with your right ring finger and release your right nostril.<br>
+                      4. Exhale slowly through the right nostril.<br>
+                      5. Inhale through the right nostril, close it, and exhale through the left nostril.<br>
+                      6. Repeat for 5 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>4. Pursed-Lip Breathing</h2>
+                  <p><span><b>Best for:</b></span> <span>Improving lung function, helpful for people with asthma or COPD.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale through your nose for 2 seconds.<br>
+                      2. Purse your lips (like blowing out a candle).<br>
+                      3. Exhale slowly through pursed lips for 4 seconds.<br>
+                      4. Repeat for 5 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>5. Kapalabhati (Skull Shining Breath)</h2>
+                  <p><span><b>Best for:</b></span> <span>Energizing the mind, clearing sinuses, and improving digestion.</span><br>
+                      <b>Steps:</b><br>
+                      1. Sit in a comfortable upright position.<br>
+                      2. Take a deep inhale through your nose.<br>
+                      3. Exhale forcefully through your nose while pulling your belly in.<br>
+                      4. Inhale passively (let the air flow in naturally).<br>
+                      5. Repeat 10–20 times, then rest and repeat for 3 rounds.</p>
+              </div>
+              <div class="card">
+                  <h2>6. Resonant Breathing (Coherent Breathing)</h2>
+                  <p><span><b>Best for:</b></span> <span>Inducing relaxation and reducing stress.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale slowly for 5–6 seconds.<br>
+                      2. Exhale slowly for 5–6 seconds.<br>
+                      3. Continue this pattern for 5–10 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>7. 5-5-5 Breathing (Combat Tactical Breathing)</h2>
+                  <p><span><b>Best for:</b></span> <span>Staying calm under pressure, reducing anxiety, and improving focus.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale deeply through your nose for 5 seconds.<br>
+                      2. Hold your breath for 5 seconds.<br>
+                      3. Exhale slowly through your mouth for 5 seconds.<br>
+                      4. Repeat for 5–10 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>8. Lion’s Breath (Simhasana)</h2>
+                  <p><span><b>Best for:</b></span> <span>Releasing tension, boosting confidence, and energizing the body.</span><br>
+                      <b>Steps:</b><br>
+                      1. Sit comfortably with your spine straight.<br>
+                      2. Inhale deeply through your nose.<br>
+                      3. Open your mouth wide, stick out your tongue, and exhale forcefully while making a “ha” sound.<br>
+                      4. Repeat 5–10 times.</p>
+              </div>
+              <div class="card">
+                  <h2>9. Humming Bee Breath (Bhramari Pranayama)</h2>
+                  <p><span><b>Best for:</b></span> <span>Calming the mind, relieving stress, and improving sleep.</span><br>
+                      <b>Steps:</b><br>
+                      1. Sit in a quiet place and close your eyes.<br>
+                      2. Inhale deeply through your nose.<br>
+                      3. As you exhale, make a humming sound like a bee (mmmm sound).<br>
+                      4. Repeat for 5–10 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>10. 1:2 Breathing (Double Exhale Breathing)</h2>
+                  <p><span><b>Best for:</b></span> <span>Deep relaxation and slowing the heart rate.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale through your nose for 3 seconds.<br>
+                      2. Exhale through your mouth for 6 seconds (double the inhale duration).<br>
+                      3. Repeat for 5–10 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>11. Wim Hof Breathing</h2>
+                  <p><span><b>Best for:</b></span> <span>Boosting energy, increasing oxygen levels, and improving resilience.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale deeply through your nose or mouth, filling your lungs.<br>
+                      2. Exhale passively without forcing the air out.<br>
+                      3. Repeat for 30–40 deep breaths.<br>
+                      4. After the last exhale, hold your breath for as long as comfortable.<br>
+                      5. Inhale deeply and hold for 15 seconds, then release.<br>
+                      6. Repeat for 3–4 rounds.</p>
+              </div>
+              <div class="card">
+                  <h2>12. 7-11 Breathing</h2>
+                  <p><span><b>Best for:</b></span> <span>Managing stress and anxiety.</span><br>
+                      <b>Steps:</b><br>
+                      1. Inhale deeply through your nose for 7 seconds.<br>
+                      2. Exhale slowly through your mouth for 11 seconds.<br>
+                      3. Repeat for 5–10 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>13. Sitali (Cooling Breath)</h2>
+                  <p><span><b>Best for:</b></span> <span>Cooling the body, reducing stress, and calming the mind.</span><br>
+                      <b>Steps:</b><br>
+                      1. Sit comfortably and roll your tongue into a tube (or press lips together if you can’t roll your tongue).<br>
+                      2. Inhale deeply through the rolled tongue or pursed lips.<br>
+                      3. Close your mouth and exhale slowly through your nose.<br>
+                      4. Repeat for 5–10 minutes.</p>
+              </div>
+              <div class="card">
+                  <h2>14. Power Breathing (Tummo Breathing)</h2>
+                  <p><span><b>Best for:</b></span> <span>Generating internal heat, boosting energy, and increasing endurance.</span><br>
+                      <b>Steps:</b><br>
+                      1. Take 30–40 fast, deep breaths.<br>
+                      2. After the last inhale, hold your breath as long as you can.<br>
+                      3. When you need to breathe, take a deep inhale and hold for 10–15 seconds.<br>
+                      4. Exhale and repeat for 3–4 rounds.</p>
+              </div>
+              </div>
+          </div>
+          </div>
+         
 
               <div
                 id="timer-container"
@@ -1410,8 +1580,10 @@
               <div id="ambience-player" style="display: none"></div>
             </div>
           </div>
+          
         </article>
-      </section>
+</section>
+
     </main>
 
     <script src="https://www.youtube.com/iframe_api"></script>
@@ -1514,6 +1686,9 @@
 
         // Chat Functionality
         const emojis = [
+          "🧘",
+          "☝️",
+          "👍",
           "😊",
           "😢",
           "😡",
@@ -1613,6 +1788,7 @@
           "🎶",
           "🎸",
           "🏆",
+          
         ];
 
         emojis.forEach((emoji) => {
