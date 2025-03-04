@@ -27,6 +27,8 @@
         --input: hsl(214.3, 31.8%, 91.4%);
         --ring: hsl(262, 83%, 58%);
         --radius: 0.75rem;
+        --text-primary: #333333;
+        --nav-bg: #ffffff;
       }
 
       .dark {
@@ -49,9 +51,10 @@
         --border: hsl(217.2, 32.6%, 17.5%);
         --input: hsl(217.2, 32.6%, 17.5%);
         --ring: hsl(263, 75%, 63%);
+        --text-primary: #f0f0fa;
+        --nav-bg: #333344;
       }
 
-      /* Base Reset */
       * {
         margin: 0;
         padding: 0;
@@ -70,7 +73,6 @@
         background-color: var(--background);
         color: var(--foreground);
         line-height: 1.5;
-        overflow: hidden;
         transition: background-color 0.3s ease, color 0.3s ease;
         font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
       }
@@ -79,7 +81,8 @@
         overflow: hidden;
       }
 
-      /* Layout */
+    
+
       .container {
         max-width: 1280px;
         margin: 0 auto;
@@ -92,13 +95,13 @@
 
       /* Header & Navigation */
       .header {
-        background-color: var(--card);
+        background-color: var(--nav-bg);
         border-bottom: 1px solid var(--border);
         position: sticky;
         top: 0;
         z-index: 50;
         backdrop-filter: blur(10px);
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
         padding: 0 10%;
       }
 
@@ -118,7 +121,7 @@
       .logo-section h1 {
         font-size: 1.25rem;
         font-weight: 600;
-        color: white;
+        color: var(--text-primary);
       }
 
       .main-nav {
@@ -139,6 +142,7 @@
         border-radius: var(--radius);
         transition: color 0.2s, background-color 0.2s;
         position: relative;
+        cursor: pointer;
       }
 
       .nav-link:hover {
@@ -211,7 +215,7 @@
         left: 0;
         width: 100%;
         height: calc(100vh - 4rem);
-        background-color: var(--card);
+        background-color: var(--nav-bg);
         transform: translateX(-100%);
         transition: transform 0.3s ease;
         z-index: 40;
@@ -225,7 +229,7 @@
 
       .mobile-nav .nav-links {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
       }
 
       .mobile-nav .nav-link {
@@ -290,6 +294,19 @@
       /* Main Content Area */
       .main-content {
         padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+        min-height: 100%;
+      
+
+      }
+      @media (max-width:2024px) {
+        .main-content{
+          min-height: 90vh;
+        }
       }
 
       .grid {
@@ -379,7 +396,6 @@
         margin: 0 auto;
       }
 
-      /* Messages */
       .message {
         max-width: 85%;
         padding: 1rem 1.25rem;
@@ -410,7 +426,6 @@
         margin-right: auto;
       }
 
-      /* Chat Input */
       .chat-input-container {
         display: flex;
         align-items: center;
@@ -483,7 +498,6 @@
         background-color: hsl(262, 83%, 52%);
       }
 
-      /* Emoji Picker */
       .emoji-picker-container {
         position: relative;
       }
@@ -529,7 +543,369 @@
         transform: scale(1.1);
       }
 
-      /* Animations */
+      /* Meditation Styles */
+      .flex {
+        display: flex;
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+
+      .mb-3 {
+        margin-bottom: 0.75rem;
+      }
+
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+
+      .mb-12 {
+        margin-bottom: 3rem;
+      }
+
+      .mt-8 {
+        margin-top: 2rem;
+      }
+
+      .mt-16 {
+        margin-top: 4rem;
+      }
+
+      .mr-1 {
+        margin-right: 0.25rem;
+      }
+
+      .text-6xl {
+        font-size: 3rem;
+      }
+
+      .text-5xl {
+        font-size: 3rem;
+      }
+
+      .text-3xl {
+        font-size: 1.875rem;
+      }
+
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+
+      .text-xl {
+        font-size: 1.25rem;
+      }
+
+      .text-lg {
+        font-size: 1.125rem;
+      }
+
+      .text-sm {
+        font-size: 0.875rem;
+      }
+
+      .font-bold {
+        font-weight: 700;
+      }
+
+      .font-semibold {
+        font-weight: 600;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      .px-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .p-4 {
+        padding: 1rem;
+      }
+
+      .p-6 {
+        padding: 1.5rem;
+      }
+
+      .p-8 {
+        padding: 2rem;
+      }
+
+      .rounded-lg {
+        border-radius: 0.5rem;
+        border: none;
+        background-color: transparent;
+      }
+
+      .rounded-2xl {
+        border-radius: 1rem;
+      }
+
+      .rounded-full {
+        border-radius: 9999px;
+      }
+
+      .transition-colors {
+        transition-property: color, background-color, border-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+
+      .transition-shadow {
+        transition-property: box-shadow;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+
+      .duration-200 {
+        transition-duration: 200ms;
+      }
+
+      .duration-300 {
+        transition-duration: 300ms;
+      }
+
+      .max-w-6xl {
+        max-width: 72rem;
+      }
+
+      .max-w-md {
+        max-width: 28rem;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .gap-3 {
+        gap: 0.75rem;
+      }
+
+      .gap-8 {
+        gap: 2rem;
+      }
+
+      .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      .shadow-xl {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .overflow-hidden {
+        overflow: hidden;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .h-48 {
+        height: 12rem;
+      }
+
+      .bg-cover {
+        background-size: cover;
+      }
+
+      .bg-center {
+        background-position: center;
+      }
+
+      .space-x-2 > * + * {
+        margin-left: 0.5rem;
+      }
+
+      .space-x-4 > * + * {
+        margin-left: 1rem;
+      }
+
+      .space-y-1 > * + * {
+        margin-top: 0.25rem;
+      }
+
+      .space-y-3 > * + * {
+        margin-top: 0.75rem;
+      }
+
+      .border-t {
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: var(--border);
+      }
+
+      .pt-4 {
+        padding-top: 1rem;
+      }
+
+      .bg-primary {
+        background-color: var(--primary);
+        border: none;
+        
+      }
+
+      .hover\:bg-primary-dark:hover {
+        background-color: #3333ff;
+      }
+
+      .text-primary-foreground {
+        color: var(--primary-foreground);
+      }
+
+      .bg-card {
+        background-color: var(--card);
+      }
+
+      .text-card-foreground {
+        color: var(--card-foreground);
+      }
+
+      .bg-secondary {
+        background-color: var(--secondary);
+        border: none;
+      }
+
+      .hover\:bg-secondary-dark:hover {
+      cursor: pointer;
+      }
+
+      .text-secondary-foreground {
+        color: var(--secondary-foreground);
+      }
+
+      .bg-muted {
+        background-color: var(--muted);
+      }
+
+      .text-muted-foreground {
+        color: var(--muted-foreground);
+      }
+
+      .text-primary {
+        color: var(--primary);
+      }
+
+      .hover\:text-primary-dark:hover {
+        color: #3333ff;
+      }
+
+      button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      .flexCardHolder {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        flex-wrap: wrap;
+        min-width: 100vw;
+        overflow: hidden;
+        gap: 60px;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      .flexCard {
+        width: 400px;
+        height: 400px;
+      }
+
+      @media (max-width: 768px) {
+        
+        .mobile-menu-toggle {
+          display: flex;
+        }
+        .main-nav {
+          display: none;
+        }
+        .mobile-nav {
+          display: block;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .menu-toggle {
+          display: none;
+        }
+        .main-nav {
+          display: block;
+        }
+        .mobile-nav {
+          display: none;
+        }
+      }
+
+      /* Animation Keyframes */
       @keyframes fade-in {
         from {
           opacity: 0;
@@ -562,39 +938,18 @@
         }
       }
 
-      /* Media Queries */
-      @media (min-width: 768px) {
-        .mobile-menu-toggle {
-          display: none;
-        }
-
-        .main-nav {
-          display: block;
-        }
-
-        .mobile-nav {
-          display: none;
-        }
+      /* Section Visibility */
+      section {
+        display: none;
       }
 
-      @media (min-width: 1024px) {
-      }
-      .main-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-height: 100vh;
-        min-height: 100vh;
-      }
-
-      #chat-messages {
-        min-width: 100vw;
+      section.active {
+        display: block;
       }
     </style>
   </head>
 
-  <body>
+  <body >
     <header class="header">
       <div class="container header-content">
         <div class="logo-section">
@@ -602,6 +957,7 @@
             class="mobile-menu-toggle"
             id="mobileMenuToggle"
             aria-label="Toggle menu"
+            style="display: none;"
           >
             <span></span>
             <span></span>
@@ -612,10 +968,10 @@
 
         <nav class="main-nav">
           <ul class="nav-links">
-            <li><a href="/" class="nav-link active">Home</a></li>
-            <li><a href="/emoji.html" class="nav-link">Emoji</a></li>
-            <li><a href="#" class="nav-link">Journal</a></li>
-            <li><a href="#" class="nav-link">About</a></li>
+            <li><span class="nav-link active" data-section="home">Home</span></li>
+            <li>
+              <span class="nav-link" data-section="meditation">Meditation</span>
+            </li>
           </ul>
         </nav>
 
@@ -668,20 +1024,19 @@
 
     <div class="mobile-nav" id="mobileNav">
       <ul class="nav-links">
-        <li><a href="/" class="nav-link active">Home</a></li>
-        <li><a href="/emoji.html" class="nav-link">Emoji</a></li>
-        <li><a href="#" class="nav-link">Journal</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
+        <li><span class="nav-link active" data-section="home">Home</span></li>
+        <li>
+          <span class="nav-link" data-section="meditation">Meditation</span>
+        </li>
       </ul>
     </div>
-
-    <main class="container main-content">
-      <div class="grid">
-        <div class="main-column">
-          <section class="chat-interface card">
+   
+    <main  class="container main-content">
+      <section id="home"  id="mainBody" >
+        <div class="grid">
+          <div class="chat-interface card">
             <div class="chat-container" id="chatContainer">
               <div id="chatMessages" class="chat-messages">
-                <!-- Empty state / welcome message -->
                 <div class="welcome-container" id="welcomeContainer">
                   <div class="welcome-icon">😊</div>
                   <h2 class="welcome-title">Welcome to MindfulAI</h2>
@@ -692,7 +1047,6 @@
                 </div>
               </div>
             </div>
-
             <form id="chatForm" class="chat-input-container">
               <div class="emoji-picker-container">
                 <button
@@ -707,11 +1061,8 @@
                   class="emoji-picker"
                   id="emojiPicker"
                   style="display: none"
-                >
-                  <!-- Emojis will be dynamically inserted here -->
-                </div>
+                ></div>
               </div>
-
               <input
                 type="text"
                 id="chatInput"
@@ -719,7 +1070,6 @@
                 placeholder="Type your message or pick an emoji..."
                 aria-label="Chat message"
               />
-
               <button
                 type="submit"
                 class="send-button"
@@ -741,27 +1091,428 @@
                 </svg>
               </button>
             </form>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section id="meditation" class="min-h-screen">
+        <article>
+          <div style="padding: 5% 5%;">
+            <div class="min-h-screen">
+              <div
+                id="main-page"
+                class="flex flex-col items-center justify-center min-h-screen"
+              >
+                <div class="text-center mb-12">
+                  <h1 class="text-5xl font-bold mb-2">Find Your Inner Peace</h1>
+                  <h2 class="text-3xl font-semibold">With Meditation</h2>
+                  <p class="mt-8 text-xl italic">
+                    Inhale the future, exhale the past
+                  </p>
+                </div>
+
+                <button
+                  id="start-timer-btn"
+                  class="bg-primary hover:bg-primary-dark text-primary-foreground font-bold py-3 px-6 rounded-lg text-lg transition-colors duration-300"
+                  style="margin-bottom: 20px;"
+                >
+                  Start Meditation Timer
+                </button>
+
+                <div
+                  class=" flexCardHolder gap-8 "
+                >
+                  <div
+                    class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div
+                      class="h-48 bg-cover bg-center"
+                      style="
+                        background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+                      "
+                    ></div>
+                    <div class="p-6">
+                      <h2 class="text-xl font-bold mb-3">What is Meditation?</h2>
+                      <p>
+                        Meditation is a practice that helps you cultivate
+                        mindfulness, clarity, and inner peace. It allows you to
+                        connect with your thoughts, emotions, and the present
+                        moment.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div
+                      class="h-48 bg-cover bg-center"
+                      style="
+                        background-image: url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+                      "
+                    ></div>
+                    <div class="p-6">
+                      <h2 class="text-xl font-bold mb-3">
+                        Types of Meditation
+                      </h2>
+                      <ul class="space-y-1">
+                        <li>Mindfulness Meditation</li>
+                        <li>Guided Meditation</li>
+                        <li>Transcendental Meditation</li>
+                        <li>Loving-Kindness Meditation</li>
+                        <li>Breath Awareness</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-card flexCard text-card-foreground rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div
+                      class="h-48 bg-cover bg-center"
+                      style="
+                        background-image: url('https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+                      "
+                    ></div>
+                    <div class="p-6">
+                      <h2 class="text-xl font-bold mb-3">
+                        Benefits of Meditation
+                      </h2>
+                      <ul class="space-y-1">
+                        <li>Enhances Mental Clarity & Focus</li>
+                        <li>Reduces Stress & Anxiety</li>
+                        <li>Improves Sleep Quality</li>
+                        <li>Boosts Emotional Well-being</li>
+                        <li>Improves Physical Health</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="timer-container"
+                style="display: none;"
+                class="min-h-screen flex flex-col items-center justify-center p-4"
+              >
+                <div
+                  class="w-full max-w-md bg-card text-card-foreground rounded-2xl shadow-xl p-8"
+                >
+                  <div class="flex justify-between items-center mb-8">
+                    <button
+                      id="back-btn"
+                      class="text-primary hover:text-primary-dark flex items-center"
+                      style="border: none;background-color: transparent;"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="mr-1"
+                        
+                      >
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                      </svg>
+                      <span>Back</span>
+                    </button>
+                    <h1 class="text-2xl font-bold text-center">
+                      Meditation Timer
+                    </h1>
+                    <div class="flex space-x-2">
+                      <button
+                        id="toggle-sound-btn"
+                        class="text-primary hover:text-primary-dark"
+                        title="Toggle bell sounds"
+                        style="border: none;background-color: transparent;"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M2 9.5V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"
+                          ></path>
+                          <path d="M8 21h6"></path>
+                          <path d="M12 17v4"></path>
+                          <path d="M2 14h6"></path>
+                          <path d="M2 9.5h6"></path>
+                        </svg>
+                      </button>
+                      <button
+                        id="toggle-ambience-btn"
+                        class="text-primary hover:text-primary-dark"
+                        title="Toggle ambience sounds"
+                     
+                        style="border: none;background-color: transparent;"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                      </button>
+                      <button
+                        id="toggle-background-btn"
+                        class="text-primary hover:text-primary-dark"
+                        title="Toggle background music"
+                        style="border: none;background-color: transparent;"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M12 2v20M2 12h20"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-8">
+                    <div
+                      id="time-display"
+                      class="text-6xl font-bold text-center mb-8"
+                    >
+                      05:00
+                    </div>
+                    <div class="flex justify-center space-x-4 mb-8">
+                      <button
+                        id="play-pause-btn"
+                        class="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full p-4 shadow-lg transition-colors duration-300"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                      </button>
+                      <button
+                        id="reset-btn"
+                        class="bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full p-4 shadow-lg transition-colors duration-300"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                          ></path>
+                          <path d="M3 3v5h5"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-6">
+                    <h2 class="text-lg font-semibold mb-3">Duration</h2>
+                    <div
+                      id="duration-buttons"
+                      class="grid grid-cols-3 gap-3"
+                    ></div>
+                  </div>
+
+                  <div id="sound-options" class="mb-6 border-t pt-4">
+                    <h2 class="text-lg font-semibold mb-3">Sound Options</h2>
+                    <div class="space-y-3">
+                      <div
+                        id="bell-sound-container"
+                        class="flex justify-between items-center"
+                      >
+                        <span>Bell Sound:</span>
+                        <button
+                          id="change-bell-btn"
+                          class="bg-muted hover:bg-secondary text-secondary-foreground py-1 px-3 rounded-lg text-sm"
+                        >
+                          YouTube Tibetan Bell
+                        </button>
+                      </div>
+                      <div
+                        id="music-container"
+                        class="flex justify-between items-center"
+                      >
+                        <span>Background Music:</span>
+                        <button
+                          id="change-music-btn"
+                          class="bg-muted hover:bg-secondary text-secondary-foreground py-1 px-3 rounded-lg text-sm"
+                        >
+                          YouTube Meditation
+                        </button>
+                      </div>
+                      <div
+                        id="ambience-container"
+                        class="flex justify-between items-center"
+                      >
+                        <span>Nature Sounds:</span>
+                        <button
+                          id="change-ambience-btn"
+                          class="bg-muted hover:bg-secondary text-secondary-foreground py-1 px-3 rounded-lg text-sm"
+                        >
+                          YouTube Rain
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-center italic">
+                    "Meditation is not about stopping thoughts, but recognizing
+                    that we are more than our thoughts and our feelings."
+                  </div>
+                </div>
+              </div>
+
+              <div id="bell-player" style="display: none"></div>
+              <div id="background-player" style="display: none"></div>
+              <div id="ambience-player" style="display: none"></div>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
 
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // DOM Elements
+        // DOM Elements for Navigation
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll("section");
         const mobileMenuToggle = document.getElementById("mobileMenuToggle");
         const mobileNav = document.getElementById("mobileNav");
         const themeToggle = document.getElementById("themeToggle");
         const body = document.body;
+
+        // DOM Elements for Chat
         const chatForm = document.getElementById("chatForm");
         const chatInput = document.getElementById("chatInput");
         const chatMessages = document.getElementById("chatMessages");
-        const welcomeContainer = document.getElementById("welcomeContainer");
-        const chatContainer = document.getElementById("chatContainer");
         const emojiToggle = document.getElementById("emojiToggle");
         const emojiPicker = document.getElementById("emojiPicker");
 
-        // Emoji list
+        // DOM Elements for Meditation Timer
+        const mainPage = document.getElementById("main-page");
+        const timerContainer = document.getElementById("timer-container");
+        const startTimerBtn = document.getElementById("start-timer-btn");
+        const backBtn = document.getElementById("back-btn");
+        const timeDisplay = document.getElementById("time-display");
+        const playPauseBtn = document.getElementById("play-pause-btn");
+        const resetBtn = document.getElementById("reset-btn");
+        const toggleSoundBtn = document.getElementById("toggle-sound-btn");
+        const toggleAmbienceBtn = document.getElementById("toggle-ambience-btn");
+        const toggleBackgroundBtn = document.getElementById(
+          "toggle-background-btn"
+        );
+        const durationButtons = document.getElementById("duration-buttons");
+        const changeBellBtn = document.getElementById("change-bell-btn");
+        const changeMusicBtn = document.getElementById("change-music-btn");
+        const changeAmbienceBtn = document.getElementById("change-ambience-btn");
+        const bellSoundContainer = document.getElementById(
+          "bell-sound-container"
+        );
+        const musicContainer = document.getElementById("music-container");
+        const ambienceContainer = document.getElementById("ambience-container");
+        const soundOptions = document.getElementById("sound-options");
+
+        // Navigation Functions
+        function switchPage(sectionId) {
+          sections.forEach((section) => {
+            section.style.display =
+              section.id === sectionId ? "block" : "none";
+          });
+        }
+
+        function setActiveLink(clickedLink) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          clickedLink.classList.add("active");
+        }
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const sectionId = link.getAttribute("data-section");
+            switchPage(sectionId);
+            setActiveLink(link);
+            mobileNav.classList.remove("active");
+            body.classList.remove("menu-open");
+          });
+        });
+
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileNav.classList.toggle("active");
+          mobileMenuToggle.classList.toggle("active");
+          body.classList.toggle("menu-open");
+        });
+
+        document.addEventListener("click", (e) => {
+          if (
+            mobileNav.classList.contains("active") &&
+            !mobileNav.contains(e.target) &&
+            !mobileMenuToggle.contains(e.target)
+          ) {
+            mobileNav.classList.remove("active");
+            mobileMenuToggle.classList.remove("active");
+            body.classList.remove("menu-open");
+          }
+        });
+
+        // Theme Toggle
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          body.classList.add("dark");
+        }
+
+        themeToggle.addEventListener("click", () => {
+          body.classList.toggle("dark");
+          localStorage.setItem(
+            "theme",
+            body.classList.contains("dark") ? "dark" : "light"
+          );
+        });
+
+        // Chat Functionality
         const emojis = [
           "😊",
           "😢",
@@ -864,7 +1615,6 @@
           "🏆",
         ];
 
-        // Populate emoji picker
         emojis.forEach((emoji) => {
           const emojiElement = document.createElement("div");
           emojiElement.className = "emoji";
@@ -877,47 +1627,11 @@
           emojiPicker.appendChild(emojiElement);
         });
 
-        // Mobile menu toggle
-        mobileMenuToggle.addEventListener("click", () => {
-          mobileNav.classList.toggle("active");
-          mobileMenuToggle.classList.toggle("active");
-          body.classList.toggle("menu-open");
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener("click", (e) => {
-          if (
-            mobileNav.classList.contains("active") &&
-            !mobileNav.contains(e.target) &&
-            !mobileMenuToggle.contains(e.target)
-          ) {
-            mobileNav.classList.remove("active");
-            mobileMenuToggle.classList.remove("active");
-            body.classList.remove("menu-open");
-          }
-        });
-
-        // Theme toggle
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-          body.classList.add("dark");
-        }
-
-        themeToggle.addEventListener("click", () => {
-          body.classList.toggle("dark");
-          localStorage.setItem(
-            "theme",
-            body.classList.contains("dark") ? "dark" : "light"
-          );
-        });
-
-        // Toggle emoji picker
         emojiToggle.addEventListener("click", () => {
           emojiPicker.style.display =
             emojiPicker.style.display === "none" ? "grid" : "none";
         });
 
-        // Close emoji picker when clicking outside
         document.addEventListener("click", (e) => {
           if (
             emojiPicker.style.display !== "none" &&
@@ -928,17 +1642,14 @@
           }
         });
 
-        // Mock AI responses
         async function sendMessage(message) {
           if (message) {
-            // Add user message
             const userMessage = document.createElement("div");
             userMessage.className = "message user";
             userMessage.textContent = message;
             chatMessages.appendChild(userMessage);
 
             try {
-              // Check Wails bindings
               if (
                 !window.go ||
                 !window.go.main ||
@@ -947,8 +1658,6 @@
               ) {
                 throw new Error("Wails bindings not available");
               }
-
-              // Get AI response
               const response = await window.go.main.App.Botresponse(message);
               const aiMessage = document.createElement("div");
               aiMessage.className = "message ai";
@@ -962,13 +1671,11 @@
               chatMessages.appendChild(errorMessage);
             }
 
-            // Clear input and scroll
             chatInput.value = "";
             chatMessages.scrollTop = chatMessages.scrollHeight;
           }
         }
 
-        // Handle form submission
         chatForm.addEventListener("submit", async (event) => {
           event.preventDefault();
           const message = chatInput.value.trim();
@@ -976,57 +1683,344 @@
             await sendMessage(message);
           }
         });
+
+        // Meditation Timer Functionality
+        let bellPlayer;
+        let backgroundPlayer;
+        let ambiencePlayer;
+        let playersReady = { bell: false, background: false, ambience: false };
+
+        function onYouTubeIframeAPIReady() {
+          bellPlayer = new YT.Player("bell-player", {
+            height: "0",
+            width: "0",
+            videoId: "eNmjWjpxUOM",
+            playerVars: {
+              autoplay: 0,
+              controls: 0,
+              loop: 0,
+              rel: 0,
+              showinfo: 0,
+            },
+            events: {
+              onReady: () => {
+                bellPlayer.setVolume(100);
+                playersReady.bell = true;
+                console.log("Bell Player Ready");
+              },
+              onError: (event) =>
+                console.error("Bell Player Error:", event.data),
+              onStateChange: (event) => console.log("Bell State:", event.data),
+            },
+          });
+
+          backgroundPlayer = new YT.Player("background-player", {
+            height: "0",
+            width: "0",
+            videoId: "Ek7AC4cn6DQ",
+            playerVars: {
+              autoplay: 0,
+              controls: 0,
+              loop: 1,
+              playlist: "Ek7AC4cn6DQ",
+              rel: 0,
+              showinfo: 0,
+            },
+            events: {
+              onReady: () => {
+                backgroundPlayer.setVolume(40);
+                playersReady.background = true;
+                console.log("Background Player Ready");
+              },
+              onError: (event) =>
+                console.error("Background Player Error:", event.data),
+              onStateChange: (event) =>
+                console.log("Background State:", event.data),
+            },
+          });
+
+          ambiencePlayer = new YT.Player("ambience-player", {
+            height: "0",
+            width: "0",
+            videoId: "q76bMs-NwRk",
+            playerVars: {
+              autoplay: 0,
+              controls: 0,
+              loop: 1,
+              playlist: "q76bMs-NwRk",
+              rel: 0,
+              showinfo: 0,
+            },
+            events: {
+              onReady: () => {
+                ambiencePlayer.setVolume(30);
+                playersReady.ambience = true;
+                console.log("Ambience Player Ready");
+              },
+              onError: (event) =>
+                console.error("Ambience Player Error:", event.data),
+              onStateChange: (event) =>
+                console.log("Ambience State:", event.data),
+            },
+          });
+        }
+
+        let duration = 5;
+        let timeLeft = duration * 60;
+        let isRunning = false;
+        let timerInterval = null;
+        let soundEnabled = true;
+        let ambienceEnabled = true;
+        let backgroundEnabled = true;
+
+        const bellSounds = ["eNmjWjpxUOM", "NjY3zMqrVj4"];
+        const backgroundMusic = ["Ek7AC4cn6DQ"];
+        const ambienceSounds = ["q76bMs-NwRk", "Kc4u56Y-FAQ", "bn9F19Hi1Lk"];
+        const bellNames = ["YouTube Tibetan Bell", "YouTube Temple Bell"];
+        const musicNames = ["YouTube Meditation"];
+        const ambienceNames = [
+          "YouTube Rain",
+          "YouTube Forest Birds",
+          "YouTube Ocean Waves",
+        ];
+
+        let selectedBell = 0;
+        let selectedMusic = 0;
+        let selectedAmbience = 0;
+
+        const durations = [5, 10, 15, 20, 30, 45];
+        durations.forEach((mins) => {
+          const button = document.createElement("button");
+          button.textContent = `${mins} min`;
+          button.className =
+            duration === mins
+              ? "py-2 px-4 rounded-lg transition-colors duration-200 bg-primary text-primary-foreground"
+              : "py-2 px-4 rounded-lg transition-colors duration-200 bg-muted hover:bg-secondary text-secondary-foreground";
+          button.addEventListener("click", () => {
+            if (!isRunning) {
+              duration = mins;
+              timeLeft = duration * 60;
+              updateTimeDisplay();
+              durationButtons.querySelectorAll("button").forEach((btn) => {
+                btn.className =
+                  "py-2 px-4 rounded-lg transition-colors duration-200 bg-muted hover:bg-secondary text-secondary-foreground";
+              });
+              button.className =
+                "py-2 px-4 rounded-lg transition-colors duration-200 bg-primary text-primary-foreground";
+            }
+          });
+          durationButtons.appendChild(button);
+        });
+
+        startTimerBtn.addEventListener("click", showTimer);
+        backBtn.addEventListener("click", showMainPage);
+        playPauseBtn.addEventListener("click", toggleTimer);
+        resetBtn.addEventListener("click", resetTimer);
+        toggleSoundBtn.addEventListener("click", toggleSound);
+        toggleAmbienceBtn.addEventListener("click", toggleAmbience);
+        toggleBackgroundBtn.addEventListener("click", toggleBackground);
+        changeBellBtn.addEventListener("click", changeBellSound);
+        changeMusicBtn.addEventListener("click", changeBackgroundMusic);
+        changeAmbienceBtn.addEventListener("click", changeAmbienceSound);
+
+        function showTimer() {
+          mainPage.style.display = "none";
+          timerContainer.style.display = "flex";
+        }
+
+        function showMainPage() {
+          pauseTimer();
+          timerContainer.style.display = "none";
+          mainPage.style.display = "flex";
+        }
+
+        function updateTimeDisplay() {
+          const mins = Math.floor(timeLeft / 60);
+          const secs = timeLeft % 60;
+          timeDisplay.textContent = `${mins.toString().padStart(2, "0")}:${secs
+            .toString()
+            .padStart(2, "0")}`;
+        }
+
+        function arePlayersReady() {
+          return (
+            playersReady.bell && playersReady.background && playersReady.ambience
+          );
+        }
+
+        function toggleTimer() {
+          if (isRunning) {
+            pauseTimer();
+          } else {
+            startTimer();
+          }
+        }
+
+        function startTimer() {
+          if (!isRunning) {
+            if (!arePlayersReady()) {
+              console.error("Players not ready yet. Please wait.");
+              alert(
+                "Audio players are still loading. Please try again in a moment."
+              );
+              return;
+            }
+
+            playBellSound(soundEnabled);
+            if (backgroundEnabled && backgroundPlayer) {
+              backgroundPlayer.playVideo();
+            }
+            if (ambienceEnabled && ambiencePlayer) {
+              ambiencePlayer.loadVideoById(ambienceSounds[selectedAmbience]);
+              ambiencePlayer.playVideo();
+            }
+
+            isRunning = true;
+            updatePlayPauseButton();
+
+            timerInterval = setInterval(() => {
+              timeLeft--;
+              updateTimeDisplay();
+
+              if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                isRunning = false;
+                updatePlayPauseButton();
+                if (backgroundPlayer) backgroundPlayer.stopVideo();
+                if (ambiencePlayer) ambiencePlayer.stopVideo();
+                playBellSound(soundEnabled);
+                alert("Meditation session complete!");
+              }
+            }, 1000);
+          }
+        }
+
+        function pauseTimer() {
+          if (isRunning) {
+            clearInterval(timerInterval);
+            isRunning = false;
+            updatePlayPauseButton();
+            if (backgroundPlayer) backgroundPlayer.pauseVideo();
+            if (ambiencePlayer) ambiencePlayer.pauseVideo();
+          }
+        }
+
+        function resetTimer() {
+          clearInterval(timerInterval);
+          isRunning = false;
+          timeLeft = duration * 60;
+          updateTimeDisplay();
+          updatePlayPauseButton();
+          if (backgroundPlayer) backgroundPlayer.stopVideo();
+          if (ambiencePlayer) ambiencePlayer.stopVideo();
+        }
+
+        function playBellSound(enabled) {
+          if (enabled && bellPlayer && playersReady.bell) {
+            const videoId = bellSounds[selectedBell];
+            bellPlayer.loadVideoById(videoId);
+            bellPlayer.seekTo(0);
+            bellPlayer.playVideo();
+            setTimeout(() => {
+              bellPlayer.pauseVideo();
+            }, 5000);
+          }
+        }
+
+        function updatePlayPauseButton() {
+          playPauseBtn.innerHTML = isRunning
+            ? `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>`
+            : `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+          playPauseBtn.className = isRunning
+            ? "bg-secondary hover:bg-secondary-dark text-secondary-foreground rounded-full p-4 shadow-lg transition-colors duration-300"
+            : "bg-primary hover:bg-primary-dark text-primary-foreground rounded-full p-4 shadow-lg transition-colors duration-300";
+        }
+
+        function toggleSound() {
+          soundEnabled = !soundEnabled;
+          toggleSoundBtn.innerHTML = soundEnabled
+            ? `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path><path d="M8 21h6"></path><path d="M12 17v4"></path><path d="M2 14h6"></path><path d="M2 9.5h6"></path></svg>`
+            : `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path><path d="M8 21h6"></path><path d="M12 17v4"></path><path d="M2 14h6"></path><path d="M2 9.5h6"></path><line x1="18" y1="6" x2="6" y2="18"></line></svg>`;
+          toggleSoundBtn.title = soundEnabled
+            ? "Disable bell sounds"
+            : "Enable bell sounds";
+          toggleSoundBtn.className = soundEnabled
+            ? "text-primary hover:text-primary-dark"
+            : "text-muted-foreground hover:text-primary-dark";
+          bellSoundContainer.style.display = soundEnabled ? "flex" : "none";
+          updateSoundOptionsVisibility();
+        }
+
+        function toggleAmbience() {
+          ambienceEnabled = !ambienceEnabled;
+          toggleAmbienceBtn.className = ambienceEnabled
+            ? "text-primary hover:text-primary-dark"
+            : "text-muted-foreground hover:text-primary-dark";
+          toggleAmbienceBtn.title = ambienceEnabled
+            ? "Disable ambience sounds"
+            : "Enable ambience sounds";
+          if (!ambienceEnabled && ambiencePlayer) {
+            ambiencePlayer.pauseVideo();
+          } else if (isRunning && arePlayersReady() && ambiencePlayer) {
+            ambiencePlayer.loadVideoById(ambienceSounds[selectedAmbience]);
+            ambiencePlayer.playVideo();
+          }
+          ambienceContainer.style.display = ambienceEnabled ? "flex" : "none";
+          updateSoundOptionsVisibility();
+        }
+
+        function toggleBackground() {
+          backgroundEnabled = !backgroundEnabled;
+          toggleBackgroundBtn.className = backgroundEnabled
+            ? "text-primary hover:text-primary-dark"
+            : "text-muted-foreground hover:text-primary-dark";
+          toggleBackgroundBtn.title = backgroundEnabled
+            ? "Disable background music"
+            : "Enable background music";
+          if (!backgroundEnabled && backgroundPlayer) {
+            backgroundPlayer.pauseVideo();
+          } else if (isRunning && arePlayersReady() && backgroundPlayer) {
+            backgroundPlayer.playVideo();
+          }
+          musicContainer.style.display = backgroundEnabled ? "flex" : "none";
+          updateSoundOptionsVisibility();
+        }
+
+        function updateSoundOptionsVisibility() {
+          soundOptions.style.display =
+            !soundEnabled && !ambienceEnabled && !backgroundEnabled
+              ? "none"
+              : "block";
+        }
+
+        function changeBellSound() {
+          if (!isRunning) {
+            selectedBell = (selectedBell + 1) % bellSounds.length;
+            changeBellBtn.textContent = bellNames[selectedBell];
+          }
+        }
+
+        function changeBackgroundMusic() {
+          if (!isRunning) {
+            changeMusicBtn.textContent = musicNames[selectedMusic];
+          }
+        }
+
+        function changeAmbienceSound() {
+          if (!isRunning && playersReady.ambience) {
+            selectedAmbience = (selectedAmbience + 1) % ambienceSounds.length;
+            const videoId = ambienceSounds[selectedAmbience];
+            ambiencePlayer.loadVideoById(videoId);
+            ambiencePlayer.setPlaybackQuality("small");
+            changeAmbienceBtn.textContent = ambienceNames[selectedAmbience];
+            if (ambienceEnabled && isRunning) ambiencePlayer.playVideo();
+          }
+        }
+
+        // Initialize
+        updateTimeDisplay();
+        switchPage("home"); // Set Home as the initial page
       });
     </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Previous DOM elements and event listeners remain unchanged
-    // Add this after your existing code
-
-    const pressedKeys = new Set();
-    let shortcutTriggered = false;
-
-    async function showDialog() {
-      const userInput = prompt("Enter your input to save:");
-      if (userInput !== null && userInput.trim() !== "") {
-        try {
-          if (!window.go || !window.go.main || !window.go.main.App || !window.go.main.App.CollectAPI) {
-            console.error("Wails backend not initialized");
-            alert("Error: Application not properly initialized");
-            return;
-          }
-
-          const response = await window.go.main.App.CollectAPI(userInput);
-          alert(response); // Show feedback to the user
-        } catch (error) {
-          console.error("Error calling CollectAPI:", error);
-          alert("Error: Could not save your input");
-        }
-      }
-    }
-
-    document.addEventListener("keydown", function(e) {
-      pressedKeys.add(e.key.toLowerCase());
-      if (
-        !shortcutTriggered &&
-        pressedKeys.has("control") &&
-        pressedKeys.has("a") &&
-        pressedKeys.has("p") &&
-        pressedKeys.has("i")
-      ) {
-        shortcutTriggered = true;
-        e.preventDefault(); // Prevent browser default behavior
-        showDialog();
-      }
-    });
-
-    document.addEventListener("keyup", function(e) {
-      pressedKeys.delete(e.key.toLowerCase());
-      if (pressedKeys.size === 0) {
-        shortcutTriggered = false;
-      }
-    });
-  });
-</script>
   </body>
 </html>
